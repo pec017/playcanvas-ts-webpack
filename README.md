@@ -1,9 +1,10 @@
 # playcanvas-ts-webpack
 
-</div>
-
 Basic starter project for writing a PlayCanvas project with TypeScript and WebPack.
 
+## 使用 GitPod 插件
+
+https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
 
 ## Script example
 
