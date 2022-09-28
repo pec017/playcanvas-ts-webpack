@@ -1,0 +1,7 @@
+{
+    "warn": "这个JSON不要使用重命名的方式去创建本地的配置, 用复制的方式新建文件",
+    "projectId": "112233",
+    "accessToken": "",
+    "branchId": "f9c38be9-bac7-4753-9183-e0b9769d555c",
+    "remotePath": "Scripts"
+}
