@@ -2,9 +2,11 @@
 
 Basic starter project for writing a PlayCanvas project with TypeScript and WebPack.
 
-## 使用 GitPod 插件
+## How to use
 
-https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
+1. Install [GitPod Chrome extension](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki)
+2. Use your playcanvas projectId/branchId/accessToken in playcanvas.config.json
+3. npm i & npm run dev
 
 ## Script example
 
