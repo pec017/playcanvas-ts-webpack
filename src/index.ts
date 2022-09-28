@@ -1,1 +1,1 @@
-export { PcScript } from "./pc-script";
+export { PcScript } from './pc-script';
