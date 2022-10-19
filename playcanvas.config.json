@@ -1,7 +1,10 @@
 {
-    "warn": "这个JSON不要使用重命名的方式去创建本地的配置, 用复制的方式新建文件",
-    "projectId": "112233",
-    "accessToken": "",
-    "branchId": "f9c38be9-bac7-4753-9183-e0b9769d555c",
-    "remotePath": "Scripts"
-}
+    "note": "把branchId换成你正在开发的id然后把api key换成你自己的，然后把这个文件重命名为.pcconfig放到用户目录下 code ~/.pcconfig ",
+    "PLAYCANVAS_BRANCH_ID": "f9c38be9-bac7-4753-9183-e0b9769d555c",
+    "PLAYCANVAS_PROJECT_ID": 112233,
+    "PLAYCANVAS_USE_CWD_AS_TARGET": 1,
+    "PLAYCANVAS_API_KEY": "",
+    "PLAYCANVAS_BAD_FILE_REG": "^\\.|~$|jsconfig.json",
+    "PLAYCANVAS_BAD_FOLDER_REG": "^\\.|typings",
+    "PLAYCANVAS_TARGET_SUBDIR": "dist"
+  }

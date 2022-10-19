@@ -1,25 +1,34 @@
 const path = require('path');
 const webpack = require('webpack');
-const WebpackPlaycanvas = require('webpack-playcanvas');
-const playcanvasOption = require('./playcanvas.config.json');
+const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 
 module.exports = {
   entry: {
     main: './src/index.ts',
+    // ui: './src/ui-entry.ts',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist/Scripts'),
     filename: '[name].build.js',
     clean: true,
   },
   externals: {
     'playcanvas': 'pc',
   },
+  cache: {
+    type: 'filesystem'
+  },
   plugins: [
     new webpack.optimize.LimitChunkCountPlugin({
       maxChunks: 1
     }),
-    new WebpackPlaycanvas(playcanvasOption)
+    new WebpackShellPluginNext({
+      onAfterDone: {
+        scripts: ['node node_modules/playcanvas-sync/pcsync.js pushAll --yes'],
+        blocking: true,
+        parallel: false
+      }
+    })
   ],
   devtool: 'inline-source-map',
   resolve: {
