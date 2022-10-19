@@ -5,7 +5,7 @@ const WebpackShellPluginNext = require('webpack-shell-plugin-next');
 module.exports = {
   entry: {
     main: './src/index.ts',
-    // ui: './src/ui-entry.ts',
+    ui: './src/ui/ui-manager.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist/Scripts'),
