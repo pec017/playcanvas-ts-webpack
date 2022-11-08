@@ -3,6 +3,9 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
+import { app } from 'playcanvas';
+import { useEffect } from 'react';
+import { PositionData } from '../../context';
 
 function Copyright() {
   return (
@@ -17,11 +20,21 @@ function Copyright() {
 }
 
 export default function Main() {
+  const [positionData, setPositionData] = React.useState<PositionData>({ x: 0, y: 0, z: 0 });
+  useEffect(() => {
+    const onPositionContextSync = (p: PositionData) => {
+      setPositionData(p);
+    };
+    app?.on('context:sync', onPositionContextSync);
+    return () => {
+      app?.off('context:sync', onPositionContextSync);
+    };
+  }, []);
   return (
     <Container maxWidth="sm">
       <Box sx={{ my: 4 }}>
         <Typography variant="h4" component="h1" gutterBottom>
-          React MUI with TypeScript
+          {`x:${positionData.x};y:${positionData.y};z:${positionData.z}`}
         </Typography>
         <Copyright />
       </Box>
